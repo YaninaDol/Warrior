@@ -5,6 +5,7 @@ include 'armor.php';
 include 'warrior.php';
 include 'mounted.php';
 include 'footSoldier.php';
+include 'squad.php';
 
 
 $soldier =new Mounted(new Horse(75));

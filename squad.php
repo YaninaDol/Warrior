@@ -18,14 +18,6 @@ include 'commander.php';
          $this->commander=$commander;
         array_push($this->warriors,$this->commander) ;
      }
-     public function setMin($min)
-     {
-         $this->min=$min;
-     }
-     public function setMax($max)
-     {
-         $this->min=$max;
-     }
      public function getName()
      {
        return $this->name;
@@ -34,7 +26,7 @@ include 'commander.php';
 
      public function getWarriors()
      {
-         if(count($this->warriors>$this->min))
+         if(count($this->warriors)>$this->min)
          {
             return $this->warriors;
          }
@@ -50,10 +42,10 @@ include 'commander.php';
      }
      public function addWarrior($warrior)
      {
-         if(count($this->warriors<$this->max))
+         if(count($this->warriors)<$this->max)
          {
-             $warrior->setHP(getHP()+$this->commander->getAchive()->plusHp);
-             $warrior->setSpeed(getSpeed()+$this->commander->getAchive()->plusSpeed);
+             $warrior->setHP( $warrior->getHP()+$this->commander->getAchive()->plusHp);
+             $warrior->setSpeed( $warrior->getSpeed()+$this->commander->getAchive()->plusSpeed);
              array_push($this->warriors, $warrior);
          }
 
