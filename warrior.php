@@ -12,6 +12,27 @@ abstract class Warrior {
         $this->speed = $speed-($this->armor->getKoef());
     }
 
+    public function getHP()
+    {
+        return  $this->health;
+    }
+
+    public function getSpeed()
+    {
+        return  $this->speed;
+    }
+
+    public function setHP($HP)
+    {
+         $this->health=$HP;
+    }
+
+    public function setSpeed($speed)
+    {
+        return  $this->speed=$speed;
+    }
+
+
     public function attack($weapon) {
         echo "Нанесен удар {$weapon->getName()}ом! <br>";
         $this->health= $this->health-($weapon->getDamage())+($this->armor->getKoef());
