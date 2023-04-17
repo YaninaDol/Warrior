@@ -1,6 +1,4 @@
 <?php
-include 'warrior.php';
-include 'commander.php';
  class Squad
  {
      private $name;
@@ -33,22 +31,31 @@ include 'commander.php';
 
      }
 
-     public function deleteWarrior($warrior)
+     public function deleteWarrior($twarrior)
      {
 
-             array_shift($this->warriors, $warrior);
+             array_shift($this->warriors, $twarrior);
 
 
      }
-     public function addWarrior($warrior)
+     public function addWarrior($twarrior)
      {
          if(count($this->warriors)<$this->max)
          {
-             $warrior->setHP( $warrior->getHP()+$this->commander->getAchive()->plusHp);
-             $warrior->setSpeed( $warrior->getSpeed()+$this->commander->getAchive()->plusSpeed);
-             array_push($this->warriors, $warrior);
+             $twarrior->setHP( $twarrior->getHP()+$this->commander->getAchive()->plusHp);
+             $twarrior->setSpeed( $twarrior->getSpeed()+$this->commander->getAchive()->plusSpeed);
+             array_push($this->warriors, $twarrior);
          }
 
+     }
+
+     public function print()
+     {
+         foreach ($this->warriors as $item)
+         {
+             echo "HP: {$item->getHP()} <br>";
+             echo "Speed: {$item->getSpeed()} <br>";
+         }
      }
 
  }

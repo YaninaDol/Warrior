@@ -1,5 +1,5 @@
 <?php
-class Achievement
+ class Achievement
 {
     public $plusHp;
     public $plusSpeed;

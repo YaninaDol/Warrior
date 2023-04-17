@@ -41,7 +41,7 @@ class Heavy extends FootSoldier {
 abstract class Lightly extends FootSoldier {
 }
 
-class Melee extends Light {
+class Melee extends Lightly {
     protected $saber;
     protected $glaive;
     protected $sword;
@@ -74,7 +74,7 @@ class Melee extends Light {
     }
 }
 
-class Ranged extends Light {
+class Ranged extends Lightly {
     protected $bow;
 
     public function __construct() {

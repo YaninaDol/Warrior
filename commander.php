@@ -1,5 +1,4 @@
 <?php
-include 'achievement.php';
 class Commander extends Warrior
 {
    private $achieve;
