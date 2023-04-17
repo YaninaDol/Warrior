@@ -1,0 +1,12 @@
+.cart{
+    width: 300px;
+    align-content: center;
+    justify-content:center;
+    height: auto;
+    margin: 15px;
+    background-color: rgb(225, 230, 231);
+    border-style: ridge;
+    border-width: 2px;
+    border-color: rgb(170, 180, 191);
+    border-radius: 10px;
+}
