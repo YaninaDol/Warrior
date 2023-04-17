@@ -12,7 +12,7 @@ include 'commander.php';
      public function __construct($name,$commander)
      {
          $this->min=5;
-         $this->max=25;
+         $this->max=26;
          $this->name=$name;
          $this->warriors=array();
         array_push($this->warriors,$commander) ;
