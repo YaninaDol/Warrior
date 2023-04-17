@@ -7,7 +7,7 @@ include 'mounted.php';
 include 'footSoldier.php';
 
 
-$soldier =new Mounted(new Horse(50));
+$soldier =new Mounted(new Horse(70));
 $soldier->attack($soldier->getBow());
 $soldier->defend($soldier->getSword());
 $soldier->move();
