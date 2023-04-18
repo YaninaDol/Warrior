@@ -13,5 +13,9 @@ class Commander extends Warrior
     {
         return $this->achieve;
     }
+    public function getWeapon()
+    {
+        return new Bow();;
+    }
 }
 ?>

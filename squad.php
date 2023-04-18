@@ -24,17 +24,31 @@
 
      public function getWarriors()
      {
+
+            return $this->warriors;
+
+
+     }
+     public function isComplete()
+     {
          if(count($this->warriors)>$this->min)
          {
-            return $this->warriors;
+             return true;
          }
+         return false;
 
      }
 
-     public function deleteWarrior($twarrior)
+     public function deleteWarrior($value, $strict = TRUE)
      {
 
-             array_shift($this->warriors, $twarrior);
+
+             if(($key = array_search($value, $this->warriors, $strict)) !== FALSE) {
+                 unset($this->warriors[$key]);
+                 echo 'Убит'.'<br>';
+             }
+
+
 
 
      }

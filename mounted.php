@@ -12,6 +12,7 @@ class Mounted extends Warrior {
         $this->Bow=new Bow();
         $this->Pike=new Pike();
         $this->Sword=new Sword();
+
     }
     public function getBow()
     {
@@ -25,6 +26,17 @@ class Mounted extends Warrior {
     public function getSword()
     {
         return $this->Sword;
+    }
+    public function getWeapon()
+    {
+        $weapons=array();
+        array_push($weapons,$this->Bow);
+        array_push($weapons,$this->Pike);
+        array_push($weapons,$this->Sword);
+
+        $random_keys=array_rand($weapons,2);
+        return $weapons[$random_keys[0]];
+
     }
 
 

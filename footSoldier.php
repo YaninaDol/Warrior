@@ -36,6 +36,20 @@ class Heavy extends FootSoldier {
         return $this->shield;
     }
 
+    public function getWeapon()
+    {
+        $weapons=array();
+        array_push($weapons,$this->sword);
+        array_push($weapons,$this->axe);
+        array_push($weapons,$this->halberd);
+        array_push($weapons,$this->shield);
+
+        $random_keys=array_rand($weapons,2);
+        return $weapons[$random_keys[0]];
+
+    }
+
+
 }
 
 abstract class Lightly extends FootSoldier {
@@ -72,6 +86,19 @@ class Melee extends Lightly {
     {
         return $this->swordAndShield;
     }
+
+    public function getWeapon()
+    {
+        $weapons=array();
+        array_push($weapons,$this->sword);
+        array_push($weapons,$this->saber);
+        array_push($weapons,$this->glaive);
+        array_push($weapons,$this->swordAndShield);
+
+        $random_keys=array_rand($weapons,2);
+        return $weapons[$random_keys[0]];
+
+    }
 }
 
 class Ranged extends Lightly {
@@ -83,7 +110,7 @@ class Ranged extends Lightly {
         $this->bow=new Bow();
 
     }
-    public function getBow()
+    public function getWeapon()
     {
         return $this->bow;
     }
